@@ -660,3 +660,545 @@ while True:
     print("Temperature: {}°C   Humidity: {:.0f}% ".format(temp, hum))
     sleep(2)
  ```
+### 13. RGB LED
+
+Descripción:
+
+Autor:
+
+ ``` Python
+ from machine import Pin
+from time import sleep
+
+btn = Pin(10,Pin.IN,Pin.PULL_UP)
+
+while True:
+    if btn.value()== 0:
+        print(a)
+ ```
+ 
+ ### 14. TILT SWITCH
+
+Descripción:
+
+Autor:
+
+ ``` Python
+ from machine import Pin
+import time
+
+TiltSensor = Pin(17, Pin.IN)
+
+while True:
+    value = TiltSensor.value()
+    print(value, end = " ")
+    if  value== 0:
+        print("The switch is turned on")
+    else:
+        print("The switch is turned off")
+    time.sleep(0.1)
+ ```
+ 
+ ### 15. PHOTORESISTOR
+
+Descripción:
+
+Autor:
+
+ ``` Python
+ from machine import ADC, Pin
+from time import sleep
+
+photoPIN = 26
+
+def readLight(photoGP):
+    photoRes = ADC(Pin(26))
+    
+    light = photoRes.read_u16()
+    light = round(light/65535*100,2)
+    return light
+
+while True:
+    print("light: " + str(readLight(photoPIN)) + "%")
+    sleep(1)
+ ```
+ 
+ ### 16. RELAY
+
+Descripción:
+
+Autor:
+
+ ``` Python
+ from machine import Pin
+import utime
+
+relay = Pin(18,Pin.OUT)
+
+while True:
+    
+    relay.value(1)
+    utime.sleep(0.5)
+    relay.value(0)
+    utime.sleep(0.5)
+ ```
+ ### 17. BALL SWITCH
+
+Descripción:
+
+Autor:
+
+ ``` Python
+ from machine import Pin
+import time
+
+BallSensor = Pin(17, Pin.IN)
+
+while True:
+    value = BallSensor.value()
+    print(value, end = " ")
+    if  value== 0:
+        print("The ball is moving...")
+    else:
+        print("The ball isn't moving...")
+    time.sleep(0.1)
+ ```
+ 
+ ### 18. MINI SWITCH
+
+Descripción:
+
+Autor:
+
+ ``` Python
+ from machine import Pin
+import utime
+
+pin=16
+sensor=Pin(pin, Pin.IN)
+utime.sleep(1)
+
+while True:
+    if sensor.value()==1:
+        print("Switch Apagado")
+        utime.sleep(1)    
+    else:
+        print("Switch Encendido")
+        utime.sleep(1)
+utime.sleep(1)
+
+ ```
+ ### 19. IR RECEIVER
+
+Descripción:
+
+Autor:
+
+ ``` Python
+ from machine import Pin
+import time
+
+pico_led = Pin(25, Pin.OUT)
+ir = Pin(15, Pin.OUT)
+receiver = Pin(16, Pin.IN)
+
+
+while True:
+    ir.value(1)
+    
+    #Cuando el sensor recibe un valor se prende el led de la Pico
+    if(receiver.value() == 1):
+        pico_led.value(1)
+    else:
+        pico_led.value(0)
+        
+    time.sleep(1)
+ ```
+ 
+ ### 20. JOYSTICK
+
+Descripción:
+
+Autor:
+
+ ``` Python
+ from machine import Pin, ADC
+import utime#libs
+
+xAxis = ADC(Pin(27))#pin adc 27 para el ejex del pinout del joystick
+yAxis = ADC(Pin(26))#pin adc 26 para el ejey del pinout del joystick
+button = Pin(16,Pin.IN, Pin.PULL_UP)#pin 16 para el boton del joystick, syntax de analog input
+while True:#loop
+    xValue = xAxis.read_u16()#catch x value
+    yValue = yAxis.read_u16()#catch y value
+    buttonValue = button.value()#catch btn value
+    if xValue <= 600:#si el valor es de 600 (llega hasta 65K) o menos, se interpreta como Left
+        xStatus = "left"
+        print(xStatus)
+    elif xValue >= 60000:#al pasar el valor de 60k se interpeta como right
+        xStatus = "right"
+        print(xStatus)
+    if yValue <= 600:#up y down funcionan similar pero con el pin 26
+        yStatus = "up"
+        print(yStatus)
+    elif yValue >= 60000:
+        yStatus = "down"
+        print(yStatus)
+    if buttonValue == 0:#al ser un digital input muy simple, maneja 0 y 1, donde 1 es not pressed, pero no lo escribe porque seria un spam en la terminal
+        buttonStatus = "pressed"
+        print(buttonStatus)
+        #despues de cada detect de cambios, se imprime el valor si se cumple la condicion
+    utime.sleep(0.1)#ritmo con el que se busca un cambio en los valores x, y y el btn
+
+ ```
+ 
+### 21. REED SWITCH
+
+Descripción:
+
+Autor:
+
+ ``` Python
+ from machine import Pin
+import time
+
+ReedSensor = Pin(18, Pin.IN)
+while True:
+    value = ReedSensor.value()
+    print(value, end = " ")
+    if value == 0:
+        print("A magnetic field")
+    else:
+        print("There is no magnetic field")
+    time.sleep(0.1)
+ ``` 
+ 
+ ### 22. FLAME
+
+Descripción:
+
+Autor:
+
+ ``` Python
+ from machine import Pin#pin lib
+import time#time lib
+
+flame = Pin(0,Pin.IN)#analog input
+    
+while True:#loop 
+    if flame.value() == 0:#en analog input, el valor default es 1, al detectar fuego se vuelve 0
+        print("fuego!")#alerta en terminal
+        time.sleep(1)#sleep de 1 segundo para no saturar la terminal
+ ```
+ 
+ ### 23. MINI TWO-COLOR
+
+Descripción:
+
+Autor:
+
+ ``` Python
+ from machine import Pin
+import time
+
+led_pins = [16,17]
+leds = [Pin(led_pins[0],Pin.OUT),Pin(led_pins[1],Pin.OUT)]
+delay_t = 0.2
+while True:
+    for led in leds:
+        led.high()
+        time.sleep(delay_t)
+        led.low()
+        time.sleep(delay_t)
+ ```
+ 
+ ### 24. TAP MODULE
+
+Descripción:
+
+Autor:
+
+ ``` Python
+ import time
+from machine import Pin
+
+pico_led = Pin(25, Pin.OUT)
+knock = Pin(16, Pin.IN)
+
+while True:
+    if(knock.value() == 1):
+        pico_led.value(1)
+        time.sleep(2)
+    else:
+        pico_led.value(0)
+        time.sleep(2)
+ ```
+ 
+ ### 25. AVOIDANCE
+
+Descripción:
+
+Autor:
+
+ ``` Python
+ from machine import Pin
+import time
+
+sensor = Pin(16, Pin.IN)
+while True:
+    if sensor.value() == 0:
+        print("There are obstacles")
+    else:
+        print("All going well")
+    time.sleep(0.1)
+ ```
+ 
+ ### 26. TRACKING
+
+Descripción:
+
+Autor:
+
+ ``` Python
+ from machine import Pin
+import time
+
+sensor = Pin(3, Pin.IN, Pin.PULL_UP)
+
+while True:
+    if sensor.value() == 0:
+        print("0   White")
+    else:
+        print("1   Black")
+    time.sleep(0.1)
+ ```
+ 
+ ### 27. 7 COLOR FLASH
+
+Descripción:
+
+Autor:
+
+ ``` Python
+ import time
+from machine import Pin
+
+led = Pin(26, Pin.OUT)
+
+while True:
+    
+    print("LED Encendido")
+    led.on()  
+    time.sleep(5)
+    
+    print("LED Apagado")
+    led.off()    
+    time.sleep(5)
+ ```
+ 
+ ### 28. TOUCH
+
+Descripción:
+
+Autor:
+
+ ``` Python
+ from machine import Pin
+import time
+
+button = Pin(3, Pin.IN, Pin.PULL_UP)
+
+while True:
+    if button.value() == 1:
+        print("You pressed the button!")
+    else:
+        print("You loosen the button!")
+    time.sleep(0.1)
+ ```
+ 
+ ### 29. BIG SOUND
+
+Descripción:
+
+Autor:
+
+ ``` Python
+ from machine import Pin, ADC
+from time import sleep
+
+buzzer = Pin(16, Pin.OUT, value=0)
+
+sensor = ADC(0)
+
+while True:
+    value = sensor.read_u16()
+    print(value)
+    sleep(0.5)
+ ```
+ 
+  ### 30. SMALL SOUND
+
+Descripción:
+
+Autor:
+
+ ``` Python
+ from machine import Pin, ADC
+from time import sleep
+
+buzzer = Pin(16, Pin.OUT, value=0)
+
+sensor = ADC(0)
+
+while True:
+    value = sensor.read_u16()
+    print(value)
+    sleep(0.5)
+ ```
+ 
+  ### 31. HEARTBEAT
+
+Descripción:
+
+Autor:
+
+ ``` Python
+ from machine import Pin, ADC
+import utime
+
+POT_Value = ADC(26)
+led = Pin("LED", Pin.OUT)
+readings = []
+
+print("KY-039 Heartbeat")
+print("Coloque el dedo en el sensor\n")
+
+while True:
+    
+    readings.clear()
+    
+    while len(readings) <= 5:       
+        readings.append(POT_Value.read_u16())
+        utime.sleep_ms(20)
+    
+    average = (sum(readings)/len(readings))/600
+    
+    if average > 90:
+        print(average)
+        led.on()
+    
+    utime.sleep_ms(200)   
+    led.off()
+ ```
+ 
+  ### 32. ROTARY ENCODER
+
+Descripción:
+
+Autor:
+
+ ``` Python
+ from machine import Pin, I2C
+from ssd1306 import SSD1306_I2C
+from picozero import RGBLED
+import utime
+from oled import Write, GFX, SSD1306_I2C
+from oled.fonts import ubuntu_mono_15, ubuntu_mono_20
+import utime
+
+WIDTH  = 128                                         
+HEIGHT = 64
+i2c = I2C(0, scl=Pin(9), sda=Pin(8), freq=200000) 
+rgb = RGBLED(red=16,green=18,blue=20)
+dtpin = Pin(14,Pin.IN,Pin.PULL_UP)
+clpin = Pin(15,Pin.IN,Pin.PULL_UP)
+rbtn = Pin(13,Pin.IN,Pin.PULL_UP)
+
+value = True
+pvalue = False
+rvalue = 0
+gvalue = 0
+bvalue = 0
+cycle = "r"
+oled = SSD1306_I2C(WIDTH, HEIGHT, i2c)
+writeuwu = Write(oled, ubuntu_mono_20)
+def rotary_changed():
+    oled.fill(0)
+    global pvalue
+    global value
+    global rvalue,gvalue,bvalue
+    global cycle
+    if rvalue < 0:
+        rvalue = 0
+    elif rvalue > 255:
+        rvalue == 255
+    if gvalue < 0:
+        gvalue = 0
+    elif gvalue > 255:
+        gvalue == 255
+    if bvalue < 0:
+        bvalue = 0
+    elif bvalue > 255:
+        bvalue == 255
+    if pvalue != clpin.value():
+        if clpin.value() == False:
+            if dtpin.value() == False:
+                if cycle == "r":
+                    if rvalue < 255:
+                       rvalue = rvalue + 5
+                    else:
+                        print("already 255!")
+                        
+                elif cycle == "g":
+                    if gvalue < 255:
+                       gvalue = gvalue + 5
+                    else:
+                        print("already 255!")
+                        
+                elif cycle == "b":
+                    if bvalue < 255:
+                       bvalue = bvalue + 5
+                    else:
+                        print("already 255!")
+                        
+                rgb.color = (rvalue,gvalue,bvalue)
+            else:
+                if cycle == "r":
+                    if rvalue > 0:
+                       rvalue = rvalue - 5
+                    else:
+                        print("already 0!")
+                        
+                elif cycle == "g":
+                    if gvalue > 0:
+                       gvalue = gvalue - 5
+                    else:
+                        print("already 0!")
+                elif cycle == "b":
+                    if bvalue > 0:
+                       bvalue = bvalue - 5
+                    else:
+                        print("already 0!")
+                rgb.color = (rvalue,gvalue,bvalue)
+        pvalue = clpin.value()
+        writeuwu.text("Red: ", 20, 0)
+        writeuwu.text("Green: ", 0, 20)
+        writeuwu.text("Blue: ", 10, 40)
+        
+        writeuwu.text(str(rvalue),60,0)
+        writeuwu.text(str(gvalue),60,20)
+        writeuwu.text(str(bvalue),60,40)
+        oled.show()
+    if rbtn.value() == 0:       
+        if cycle == "r":
+            cycle = "g"
+        elif cycle == "g":
+            cycle = "b"
+        elif cycle == "b":
+            cycle = "r"
+        utime.sleep(1)
+        
+
+while True:
+   rotary_changed()
+ ```
