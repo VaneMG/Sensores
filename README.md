@@ -10,7 +10,7 @@ Autor (es):
 
 - Ernesto Gerardo Manuel Aparicio
 - Alejandro Martinez Reyes
-- Arturo Rodriguez Jimenez
+- Arturo Rodriguez Jimenez - 20210625
 - Carlos Ivan Oroz Quiroz
 - Arely Vanessa Millán Guízar
 
