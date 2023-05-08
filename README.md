@@ -11,7 +11,7 @@ Autor (es):
 - Ernesto Gerardo Manuel Aparicio
 - Alejandro Martinez Reyes - 20210593
 - Arturo Rodriguez Jimenez - 20210625
-- Carlos Ivan Oroz Quiroz
+- Carlos Ivan Oroz Quiroz - 17212168
 - Arely Vanessa Millán Guízar - 20210599
 
 Repositorio: Sensores
