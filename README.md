@@ -9,10 +9,10 @@ Sistemas Programables 23a
 Autor (es):
 
 - Ernesto Gerardo Manuel Aparicio
-- Alejandro Martinez Reyes
+- Alejandro Martinez Reyes - 20210593
 - Arturo Rodriguez Jimenez - 20210625
 - Carlos Ivan Oroz Quiroz
-- Arely Vanessa Millán Guízar
+- Arely Vanessa Millán Guízar - 20210599
 
 Repositorio: Sensores
 
