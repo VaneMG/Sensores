@@ -1036,7 +1036,7 @@ while True:
     sleep(0.5)
  ```
  
-  ### 30. SMALL SOUND
+  ### 30. KY-038 (Small Sound)
 
 Descripción:
 
