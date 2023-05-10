@@ -1210,25 +1210,15 @@ Descripción:
 Autor:
 
  ``` Python
-from machine import Pin
-
-button_pin = Pin(16, Pin.IN, Pin.PULL_UP)
-direction_pin = Pin(17, Pin.IN, Pin.PULL_UP)
-step_pin  = Pin(18, Pin.IN, Pin.PULL_UP)
-
-previous_value = True
-button_down = False
+import RPi.GPIO as GPIO
+import time
+sensor_pin = 17
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(sensor_pin, GPIO.IN)
 
 while True:
-     if previous_value != step_pin.value():
-         if step_pin.value() == False:
-             if direction_pin.value() == False:
-                 print("turned left")
-             else:
-                 print("turned right")
-         previous_value = step_pin.value()   
-    
-     if button_pin.value() == False and not button_down:
-         print("button pushed") 
-         button_down = True
+    value = GPIO.input(sensor_pin)
+    print(value)
+    time.sleep(0.1)
+
    ```
