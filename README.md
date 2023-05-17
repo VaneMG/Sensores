@@ -99,35 +99,28 @@ while True:
         print(a)
  ```
  
-### 5. IR EMISSION
+### 5. KY-005 (IR EMISSION)
 
 Descripción:
 
 Autor:
 
 ``` Python
-from machine import Pin
-import time
+#KY-005 IR Emission
 
-pico_led = Pin(25, Pin.OUT)
-ir = Pin(15, Pin.OUT)
-receiver = Pin(16, Pin.IN)
+import machine
+from ir_tx import NEC
+import utime
 
+sensorIR = machine.Pin(26, machine.Pin.OUT) #ADC0 sera mi salida de datos analogicos
+sensorIR.value(0)# asignamos valor
+nec = NEC(sensorIR)
+sw = machine.Pin(0,machine.Pin.IN)
 
 while True:
-    # Se prende el sensor para que siempre
-    # este emitiendo luz infraroja
-    ir.value(1)
-    
-
-    print(receiver.value())
-    
-    if(receiver.value() == 1):
-        pico_led.value(1)
-    else:
-        pico_led.value(0)
-        
-    time.sleep(1)
+    if sw.value() == 0:
+        nec.transmit(0x0000, 0x09) #trasfiero este valor
+    machine.sleep_ms(100)
 ```
 
 ### 6. Passive Buzzer
