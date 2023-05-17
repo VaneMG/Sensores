@@ -20,9 +20,11 @@ Fecha de revisión:   99/99/2023
 
 ### 1. DS18B20 
 
-Descripción:
+Descripción: El sensor de temperatura DS18B20 es uno de los sensores más versátiles que puedes encontrar en el mercado.
 
-Autor:
+Este sensor es idóneo cuando queremos medir la temperatura en ambientes húmedos e incluso dentro del agua.
+
+Autor: Arturo Rodriguez Jimenez
 
 ``` Python
 import machine, onewire, ds18x20, time
@@ -41,9 +43,10 @@ while True:
 
 ### 2. KY-002 (SHOCK)
 
-Descripción:
+Descripción: El sensor de choque KY-002 es un componente electrónico utilizado para detectar golpes o vibraciones. Consiste en un martillo metálico unido a un mecanismo de resorte y un interruptor que contacta con el martillo. Cuando el martillo se mueve por golpes o vibraciones, presiona el interruptor y cierra el circuito.
+El sensor de choque KY-002 es una herramienta útil en muchos proyectos electrónicos donde la detección de golpes o vibraciones es importante. Se puede utilizar, por ejemplo, para activar una alarma cuando se produce un robo o cuando se cae un objeto. También se puede utilizar para monitorear el movimiento de máquinas o dispositivos y controlar su funcionamiento.
 
-Autor:
+Autor: Alejandro Martinez Reyes
 
 ``` Python
 import time
@@ -63,9 +66,11 @@ while True:
 
 ### 3. KY-003 (HALL MAGNETIC)
 
-Descripción:
+Descripción: El módulo de sensor magnético Hall KY-003 es un interruptor que reacciona a la presencia de un campo magnético, encendiéndose o apagándose. Compatible con microcontroladores populares como Arduino, Raspberry Pi y ESP32.
 
-Autor:
+Este módulo ofrece una salida digital, se parece al sensor magnético hall analógico KY-035, y es funcionalmente similar al KY-024, un sensor magnético digital / analógico.
+
+Autor: Carlos Ivan Oroz Quiroz
 
 ``` Python
 from machine import Pin
@@ -84,9 +89,11 @@ while True:
 
 ### 4. KY-004 (BUTTON)
 
-Descripción:
+Descripción: El Módulo ky-004 Sensor Push Button detecta una acción al momento de presionarlo, se utiliza para proyectos en donde se necesite una señal externa.
 
-Autor:
+El Módulo ky-004 Sensor Push Button se utilizan en dispositivos mecánicos y/o electrónicos  para mandar una señal, interruptor o reiniciar un programa.
+
+Autor: Alejandro Martinez Reyes
 
 ``` Python
 from machine import Pin
@@ -101,9 +108,9 @@ while True:
  
 ### 5. KY-005 (IR EMISSION)
 
-Descripción:
+Descripción: El Sensor Infrarrojo Emisor es un módulo KY-005 también llamado diodo emisor infrarrojo es un modulo que convierte la energía eléctrica en luz infrarroja a una frecuencia de 38KHz y una longitud de onda de 940 nm esto se encuentra fuera del espectro detectable por humanos. Consiste en un led IR de 5mm funciona generalmente en conjunto con el receptor de infrarrojo KY-022.
 
-Autor:
+Autor: Arturo Rodriguez Jimenez
 
 ``` Python
 #KY-005 IR Emission
@@ -125,9 +132,11 @@ while True:
 
 ### 6. Passive Buzzer
 
-Descripción:
+Descripción: Los zumbadores pasivos necesitan una señal de CA para producir sonido. la desventaja de esto es que necesitarán circuitos más complejos para controlarlos, como un temporizador oscilante 555 o un microcontrolador programable como el Arduino.
 
-Autor:
+Los zumbadores pasivos tienen la ventaja de que pueden variar el tono o el tono del sonido. Los zumbadores pasivos se pueden programar para emitir una amplia gama de frecuencias o notas musicales.
+
+Autor: Carlos Ivan Oroz Quiroz
 
 ``` Python
 from machine import Pin, PWM
@@ -155,9 +164,9 @@ buzzer.duty_u16(0)
 
 ### 7. KY-008 (LASER EMIT)
 
-Descripción:
+Descripción: El sensor KY-008 (Laser Emit) es un módulo electrónico que incluye un diodo láser. Este módulo se utiliza principalmente como un componente de salida para emitir un haz de luz láser.
 
-Autor:
+Autor: Arely Vanessa Millán Guízar
 
 ``` Python
 import time
@@ -178,9 +187,9 @@ while True:
 
 ### 8. SMD RBGB
 
-Descripción:
+Descripción: Es un diodo emisor de luz de tecnología de montaje superficial. Se caracteriza por tener un encapsulado que permite ser soldado directamente sobre las superficies de las placas de circuitos impresos.
 
-Autor:
+Autor: Arturo Rodriguez Jimenez
 
  ``` Python
 from machine import Pin, I2C
@@ -290,9 +299,9 @@ while True:
 
 ### 9. LIGHT BLOCKING
 
-Descripción:
+Descripción: El sensor de bloqueo de luz, también conocido como sensor de interrupción de luz, es un tipo de sensor óptico que detecta cambios en la intensidad de la luz al bloquearse o interrumpirse el paso de la luz entre el emisor y el receptor del sensor.
 
-Autor:
+Autor: Ernesto Gerardo Manuel Aparicio
 
  ``` Python
  
@@ -300,9 +309,11 @@ Autor:
  
  ### 10. KY-011 (Two-Color)
 
-Descripción:
+Descripción: El sensor KY-011 (Two-Color) es un módulo electrónico que combina dos LED de diferentes colores en un solo dispositivo. Este módulo se utiliza para detectar la presencia de luz o para realizar mediciones de color básicas.
 
-Autor:
+El sensor KY-011 consta de dos LED, uno de color rojo y otro de color verde, montados en una pequeña placa de circuito impreso. Cada LED puede encenderse y apagarse de forma independiente.
+
+Autor: Arely Vanessa Millán Guízar
 
  ``` Python
  from machine import Pin
@@ -321,9 +332,11 @@ while True:
  
  ### 11. KY-012 (BUZZER)
 
-Descripción:
+Descripción: El Sensor Zumbador Activo KY-012 es un dispositivo electrónico que permite reproducir un sonido de un solo tono; a diferencia del KY-006 que puede reproducir diferentes tonos.
 
-Autor:
+El modulo KY-012 integra un zumbador activo, este incorpora un oscilador simple por lo que únicamente es necesario suministrar corriente al dispositivo para que emita sonido. La diferencia de un buzzer activo a un pasivo es que el pasivo necesita recibir una onda de frecuencia.
+
+Autor: Arturo Rodriguez Jimenez
 
  ``` Python
  from machine import Pin
@@ -635,9 +648,9 @@ class music:
  
  ### 12. KY-015 (TEMP AND HUMIDITY)
 
-Descripción:
+Descripción: El módulo DHT11 o KY-015 es un sensor de temperatura y humedad de salida de señal digital, tiene un tamaño ultra compacto, es de bajo consumo de energía y tiene gran utilidad cuando se requiere detectar dos magnitudes al mismo tiempo.
 
-Autor:
+Autor: Alejandro Martinez Reyes
 
  ``` Python
  from machine import Pin
@@ -655,9 +668,9 @@ while True:
  ```
 ### 13. RGB LED
 
-Descripción:
+Descripción: El LED RGB es un tipo especial de diodo LED que se compone por varias matrices LEDs simples como las que se encuentran en otros LEDs monocolor. De esa forma, pueden emitir en estos tres colores primarios, generando así todo tipo de efectos y colores diferentes (incluso el blanco combinando el rojo, verde y azul a la vez) tan solo controlando una de las patillas de estos componentes.
 
-Autor:
+Autor: Carlos Ivan Oroz Quiroz
 
  ``` Python
  from machine import Pin
@@ -672,9 +685,9 @@ while True:
  
  ### 14. TILT SWITCH
 
-Descripción:
+Descripción: Un Tilt Switch o interruptor basculante es un tipo de interruptor o sensor de inclinación que cambia en un cierto ángulo en comparación con el horizonte (similar al antiguo interruptor de mercurio). Se trata de un inclinómetro con salida de conmutación. Dado que la gravedad sirve como referencia, se consigue la máxima libertad de montaje.
 
-Autor:
+Autor: Arturo Rodriguez Jimenez
 
  ``` Python
  from machine import Pin
@@ -694,9 +707,9 @@ while True:
  
  ### 15. KY-018 (Photoresistor)
 
-Descripción:
+Descripción: El módulo de fotorresistencia KY-018 se utiliza para medir la intensidad de la luz. La resistencia disminuirá en presencia de luz y aumentará en ausencia de ella. La salida es analógica y determina la intensidad de la luz.
 
-Autor:
+Autor: Alejandro Martinez Reyes
 
  ``` Python
  from machine import ADC, Pin
@@ -718,9 +731,9 @@ while True:
  
  ### 16. KY-019 (Relay)
 
-Descripción:
+Descripción: El sensor KY-019 (Relay) es un módulo electrónico que incluye un relé electromagnético. Este módulo se utiliza para controlar dispositivos de alto voltaje o corriente utilizando señales de baja potencia provenientes de microcontroladores u otros circuitos electrónicos.
 
-Autor:
+Autor: Arely Vanessa Millán Guízar
 
  ``` Python
  from machine import Pin
@@ -737,9 +750,9 @@ while True:
  ```
  ### 17. BALL SWITCH
 
-Descripción:
+Descripción: El "sensor ball switch" es un tipo de interruptor o sensor que se activa mediante el movimiento de una bola metálica en su interior. Este tipo de sensor consiste en una carcasa que contiene una pequeña bola metálica y un interruptor en su base. Cuando la carcasa se inclina o se produce un movimiento suficiente, la bola metálica se mueve y hace contacto con el interruptor, cerrando o abriendo el circuito eléctrico.
 
-Autor:
+Autor: Carlos Ivan Oroz Quiroz
 
  ``` Python
  from machine import Pin
@@ -759,9 +772,10 @@ while True:
  
  ### 18. MINI SWITCH
 
-Descripción:
+Descripción: 
+Un "mini switch" se refiere a un interruptor de tamaño pequeño. Un interruptor, en general, es un dispositivo eléctrico que permite abrir o cerrar un circuito para controlar el flujo de corriente eléctrica.
 
-Autor:
+Autor:  Ernesto Gerardo Manuel Aparicio
 
  ``` Python
  from machine import Pin
@@ -783,9 +797,9 @@ utime.sleep(1)
  ```
  ### 19. KY-022 (IR RECEIVER)
 
-Descripción:
+Descripción: El Sensor Receptor Infrarrojo IR es un módulo KY-022 que esta construido de un receptor IR TL1838, el cual reacciona a la luz infrarroja de 38 KHz y funciona en conjunto con el emisor KY-005.
 
-Autor:
+Autor: Alejandro Martinez Reyes
 
  ``` Python
  from machine import Pin
@@ -810,9 +824,9 @@ while True:
  
  ### 20. JOYSTICK
 
-Descripción:
+Descripción: El Módulo KY-023 Sensor JoyStick es un dispositivo electromecánico consta de dos potenciómetros en un ángulo de 90 grados. Este elemento te permite controlar y manejar determinados aparatos electrónicos. Normalmente se utilizan para proyectos robóticos en el cual se necesitan para la movilidad analógica de las articulaciones de un brazo robótico. El Módulo Joystick, es más utilizado para proyectos de robótica y control de dispositivos RF(Radio Frecuencia)NRF24L01.
 
-Autor:
+Autor: Arturo Rodriguez Jimenez
 
  ``` Python
  from machine import Pin, ADC
@@ -847,9 +861,9 @@ while True:#loop
  
 ### 21. KY-025 (Reed Switch)
 
-Descripción:
+Descripción: El sensor KY-025 (Reed Switch) es un módulo electrónico que incorpora un interruptor de lengüeta (reed switch) en su diseño. Este sensor se utiliza para detectar la presencia o ausencia de un campo magnético.
 
-Autor:
+Autor: Arely Vanessa Millán Guízar
 
  ``` Python
  from machine import Pin
@@ -868,9 +882,11 @@ while True:
  
  ### 22. KY-026 (FLAME)
 
-Descripción:
+Descripción: El sensor KY-026 (FLAME) es un módulo electrónico diseñado para detectar la presencia de fuego o llamas. Este sensor se utiliza para detectar incendios o flamas en aplicaciones de seguridad o control.
 
-Autor:
+El sensor KY-026 utiliza un sensor de llama sensible a la radiación infrarroja emitida por una fuente de fuego. Cuando se detecta la presencia de una flama, el sensor genera una señal de salida que puede ser utilizada para activar una alarma, un sistema de extinción de incendios u otros dispositivos de seguridad.
+
+Autor: Arely Vanessa Millán Guízar
 
  ``` Python
  from machine import Pin#pin lib
@@ -886,9 +902,7 @@ while True:#loop
  
  ### 23. MINI TWO-COLOR
 
-Descripción:
-
-Autor:
+Autor: Ernesto Gerardo Manuel Aparicio
 
  ``` Python
  from machine import Pin
@@ -906,10 +920,8 @@ while True:
  ```
  
  ### 24. TAP MODULE
-
-Descripción:
-
-Autor:
+ 
+Autor: Carlos Ivan Oroz Quiroz
 
  ``` Python
  import time
@@ -929,9 +941,9 @@ while True:
  
  ### 25. AVOIDANCE
 
-Descripción:
+Descripción: se refiere a un tipo de sensor utilizado para evitar obstáculos o colisiones en aplicaciones robóticas o de navegación autónoma. Estos sensores están diseñados para detectar la presencia de objetos cercanos y enviar señales de advertencia o control para evitarlos.
 
-Autor:
+Autor: Ernesto Gerardo Manuel Aparicio
 
  ``` Python
  from machine import Pin
@@ -948,9 +960,9 @@ while True:
  
  ### 26. KY-033 (Tracking)
 
-Descripción:
+Descripción: Este es básicamente un módulo de detección de obstáculos que tiene un receptor y transmisor incorporados que detecta la energía IR y busca la energía IR reflejada para detectar el obstáculo frente al módulo sensor. El sensor devuelve el estado de la luz IR reflejada desde la superficie. Así que es un dispositivo bastante simple, tiene un receptor de infrarrojos y un transmisor de infrarrojos. 
 
-Autor:
+Autor: Alejandro Martinez Reyes
 
  ``` Python
  from machine import Pin
@@ -968,9 +980,9 @@ while True:
  
  ### 27. 7 COLOR FLASH
 
-Descripción:
+Descripción: El "sensor 7 color flash" se refiere a un módulo o dispositivo que combina un sensor de luz con capacidades de destello o cambio de color. Este tipo de sensor está diseñado para detectar la intensidad de la luz en el entorno y emitir destellos o cambios de color en respuesta a las variaciones de luz detectadas.
 
-Autor:
+Autor: Ernesto Gerardo Manuel Aparicio
 
  ``` Python
  import time
@@ -991,9 +1003,9 @@ while True:
  
  ### 28. KY-036 (Touch)
 
-Descripción:
+Descripción: El sensor KY-036 (Touch) es un módulo electrónico diseñado para detectar el contacto físico o la presión aplicada por un objeto. Este sensor se utiliza para detectar toques o interacciones táctiles en aplicaciones como pantallas táctiles, paneles de control o interruptores sensibles al tacto.
 
-Autor:
+Autor: Arely Vanessa Millán Guízar
 
  ``` Python
  from machine import Pin
@@ -1011,9 +1023,9 @@ while True:
  
  ### 29. KY-037 (Big Sound)
 
-Descripción:
+Descripción: El sensor KY-037 (Big Sound) es un módulo electrónico diseñado para detectar sonidos o ruidos de mayor amplitud o intensidad en el entorno. Este sensor se utiliza para captar y medir sonidos fuertes o sonidos de baja frecuencia.
 
-Autor:
+Autor: Ernesto Gerardo Manuel Aparicio
 
  ``` Python
  from machine import Pin, ADC
@@ -1031,9 +1043,9 @@ while True:
  
   ### 30. KY-038 (Small Sound)
 
-Descripción:
+Descripción: El sensor KY-038 (Small Sound) es un módulo electrónico que se utiliza para detectar y medir sonidos o ruidos pequeños en el entorno. Este sensor es sensible a las vibraciones acústicas y se utiliza en aplicaciones donde se necesita detectar la presencia o intensidad de sonidos.
 
-Autor:
+Autor: Arely Vanessa Millán Guízar
 
  ``` Python
  from machine import Pin, ADC
@@ -1051,9 +1063,9 @@ while True:
  
   ### 31. HEARTBEAT
 
-Descripción:
+Descripción: El sensor de latidos del corazón, también conocido como sensor de pulso o sensor de frecuencia cardíaca, es un dispositivo que se utiliza para medir y detectar las pulsaciones del corazón de una persona.
 
-Autor:
+Autor: Ernesto Gerardo Manuel Aparicio
 
  ``` Python
  from machine import Pin, ADC
@@ -1086,9 +1098,9 @@ while True:
  
   ### 32. ROTARY ENCODER
 
-Descripción:
+Descripción: Un "sensor rotary encoder" es un dispositivo electromecánico utilizado para medir la posición y la dirección de rotación de un eje. Consiste en un disco o dial con marcas o ranuras equidistantes en su perímetro y un conjunto de sensores ópticos o magnéticos.
 
-Autor:
+Autor: Carlos Ivan Oroz Quiroz
 
  ``` Python
  from machine import Pin, I2C
@@ -1198,9 +1210,9 @@ while True:
 
 ### 33. KY-035 (ANALOG HALL)
 
-Descripción:
+Descripción: El sensor de efecto Hall Analog 49E puede detectar el polo magnético y la fuerza relativa de un campo magnético. En el caso de nuestro módulo, envía una señal analógica cada vez que detecta un campo magnético cercano. Si no hay campo magnético, la señal analógica es la mitad del Vcc.
 
-Autor:
+Autor: Alejandro Martinez Reyes
 
  ``` Python
 import RPi.GPIO as GPIO
