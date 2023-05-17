@@ -39,7 +39,7 @@ while True:
     time.sleep(1)
 ```
 
-### 2. SHOCK
+### 2. KY-002 (SHOCK)
 
 Descripción:
 
@@ -61,7 +61,7 @@ while True:
         led.off()  
 ```
 
-### 3. HALL MAGNETIC
+### 3. KY-003 (HALL MAGNETIC)
 
 Descripción:
 
@@ -82,7 +82,7 @@ while True:
 ```
 
 
-### 4. BUTTON
+### 4. KY-004 (BUTTON)
 
 Descripción:
 
@@ -153,7 +153,7 @@ sleep(0.5)
 buzzer.duty_u16(0)
 ```
 
-### 7. LASER EMIT
+### 7. KY-008 (LASER EMIT)
 
 Descripción:
 
@@ -298,7 +298,7 @@ Autor:
  
  ```
  
- ### 10. Two-Color
+ ### 10. KY-011 (Two-Color)
 
 Descripción:
 
@@ -319,7 +319,7 @@ while True:
         time.sleep(delay_t)
  ```
  
- ### 11. BUZZER
+ ### 11. KY-012 (BUZZER)
 
 Descripción:
 
@@ -633,7 +633,7 @@ class music:
  
  ```
  
- ### 12. TEMP AND HUMIDITY
+ ### 12. KY-015 (TEMP AND HUMIDITY)
 
 Descripción:
 
@@ -692,7 +692,7 @@ while True:
     time.sleep(0.1)
  ```
  
- ### 15. PHOTORESISTOR
+ ### 15. KY-018 (Photoresistor)
 
 Descripción:
 
@@ -716,7 +716,7 @@ while True:
     sleep(1)
  ```
  
- ### 16. RELAY
+ ### 16. KY-019 (Relay)
 
 Descripción:
 
@@ -781,7 +781,7 @@ while True:
 utime.sleep(1)
 
  ```
- ### 19. IR RECEIVER
+ ### 19. KY-022 (IR RECEIVER)
 
 Descripción:
 
@@ -845,7 +845,7 @@ while True:#loop
 
  ```
  
-### 21. REED SWITCH
+### 21. KY-025 (Reed Switch)
 
 Descripción:
 
@@ -866,7 +866,7 @@ while True:
     time.sleep(0.1)
  ``` 
  
- ### 22. FLAME
+ ### 22. KY-026 (FLAME)
 
 Descripción:
 
@@ -946,7 +946,7 @@ while True:
     time.sleep(0.1)
  ```
  
- ### 26. TRACKING
+ ### 26. KY-033 (Tracking)
 
 Descripción:
 
@@ -989,7 +989,7 @@ while True:
     time.sleep(5)
  ```
  
- ### 28. TOUCH
+ ### 28. KY-036 (Touch)
 
 Descripción:
 
@@ -1009,7 +1009,7 @@ while True:
     time.sleep(0.1)
  ```
  
- ### 29. BIG SOUND
+ ### 29. KY-037 (Big Sound)
 
 Descripción:
 
