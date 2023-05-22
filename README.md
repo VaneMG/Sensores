@@ -8,7 +8,7 @@ Sistemas Programables 23a
 
 Autor (es):
 
-- Ernesto Gerardo Manuel Aparicio
+- Ernesto Gerardo Manuel Aparicio - 18210497
 - Alejandro Martinez Reyes - 20210593
 - Arturo Rodriguez Jimenez - 20210625
 - Carlos Ivan Oroz Quiroz - 17212168
